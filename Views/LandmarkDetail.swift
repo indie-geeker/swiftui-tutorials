@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LandmarkDetail.swift
 //  swiftui-tutorials
 //
 //  Created by Wen on 2025/7/9.
@@ -7,44 +7,45 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandmarkDetail: View {
+    var landmrk:Landmark
     var body: some View {
-        
-        VStack{
-            MapView()
+        ScrollView{
+            MapView(coordinate: landmrk.locationCoordinate)
                 .frame(height: 300)
             
-            CircleImage()
+            CircleImage(image: landmrk.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading){
-                Text("Turtle Rock")
+                Text(landmrk.name)
                     .font(.title)
                     .foregroundColor(.blue)
                 
                 HStack{
-                    Text("Joshua Tree National Park")
+                    Text(landmrk.park)
                         .font(.subheadline)
                     Spacer()
                     
-                    Text("California")
+                    Text(landmrk.state)
                 }
                 
                 Divider()
 
 
-                Text("About Turtle Rock")
+                Text("About \(landmrk.name)")
                       .font(.title2)
-                Text("Descriptive text goes here.")
+                Text(landmrk.description)
                 
             }
             .padding()
         }
-       
+        .navigationTitle(landmrk.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    ContentView()
+    LandmarkDetail(landmrk: landmarks[0])
 }
