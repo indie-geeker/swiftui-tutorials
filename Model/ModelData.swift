@@ -23,6 +23,8 @@ class ModelData{
             grouping: landmarks, by: {$0.category.rawValue}
         )
     }
+    
+    var profile = Profile.default
 }
 
 
