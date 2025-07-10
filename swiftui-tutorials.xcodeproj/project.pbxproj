@@ -18,10 +18,10 @@
 		A2D7F8AA2E1E62FA008F0A7C /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F8A92E1E62FA008F0A7C /* LandmarkRow.swift */; };
 		A2D7F8AC2E1E66C0008F0A7C /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F8AB2E1E66C0008F0A7C /* LandmarkList.swift */; };
 		A2D7F8AE2E1E6799008F0A7C /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F8AD2E1E6799008F0A7C /* LandmarkDetail.swift */; };
+		A2EB1D132E1F6412008582D5 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EB1D122E1F6412008582D5 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A2D7F7F92E1E4196008F0A7C /* swiftui-tutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "swiftui-tutorials.app"; path = "/Users/wen/xcodeProjects/swiftui-tutorials/build/Debug-iphoneos/swiftui-tutorials.app"; sourceTree = "<absolute>"; };
 		A2D7F8952E1E61EF008F0A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2D7F8962E1E61EF008F0A7C /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		A2D7F8972E1E61EF008F0A7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +33,8 @@
 		A2D7F8A92E1E62FA008F0A7C /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		A2D7F8AB2E1E66C0008F0A7C /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		A2D7F8AD2E1E6799008F0A7C /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		A2EB1D112E1F6228008582D5 /* swiftui-tutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "swiftui-tutorials.app"; path = "/Users/wen/xcodeProjects/swiftui-tutorials/build/Debug-iphoneos/swiftui-tutorials.app"; sourceTree = "<absolute>"; };
+		A2EB1D122E1F6412008582D5 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				A2D7F8A22E1E6226008F0A7C /* Resources */,
-				A2D7F8A12E1E6219008F0A7C /* Views */,
 				A2D7F89F2E1E61FE008F0A7C /* Model */,
 				A2D7F8952E1E61EF008F0A7C /* Assets.xcassets */,
 				A2D7F8992E1E61EF008F0A7C /* swiftui_tutorialsApp.swift */,
+				A2D7F8A12E1E6219008F0A7C /* Views */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,12 +71,9 @@
 		A2D7F8A12E1E6219008F0A7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A2D7F8962E1E61EF008F0A7C /* CircleImage.swift */,
+				A2EB1D162E1F658B008582D5 /* Helper */,
+				A2EB1D152E1F657E008582D5 /* Landmarks */,
 				A2D7F8972E1E61EF008F0A7C /* ContentView.swift */,
-				A2D7F8982E1E61EF008F0A7C /* MapView.swift */,
-				A2D7F8A92E1E62FA008F0A7C /* LandmarkRow.swift */,
-				A2D7F8AB2E1E66C0008F0A7C /* LandmarkList.swift */,
-				A2D7F8AD2E1E6799008F0A7C /* LandmarkDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +84,26 @@
 				A2D7F8A32E1E628A008F0A7C /* landmarkData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2EB1D152E1F657E008582D5 /* Landmarks */ = {
+			isa = PBXGroup;
+			children = (
+				A2D7F8A92E1E62FA008F0A7C /* LandmarkRow.swift */,
+				A2D7F8AB2E1E66C0008F0A7C /* LandmarkList.swift */,
+				A2D7F8AD2E1E6799008F0A7C /* LandmarkDetail.swift */,
+			);
+			path = Landmarks;
+			sourceTree = "<group>";
+		};
+		A2EB1D162E1F658B008582D5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A2D7F8962E1E61EF008F0A7C /* CircleImage.swift */,
+				A2D7F8982E1E61EF008F0A7C /* MapView.swift */,
+				A2EB1D122E1F6412008582D5 /* FavoriteButton.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,7 +125,7 @@
 			packageProductDependencies = (
 			);
 			productName = "swiftui-tutorials";
-			productReference = A2D7F7F92E1E4196008F0A7C /* swiftui-tutorials.app */;
+			productReference = A2EB1D112E1F6228008582D5 /* swiftui-tutorials.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,6 +182,7 @@
 				A2D7F89B2E1E61EF008F0A7C /* swiftui_tutorialsApp.swift in Sources */,
 				A2D7F89C2E1E61EF008F0A7C /* MapView.swift in Sources */,
 				A2D7F89D2E1E61EF008F0A7C /* CircleImage.swift in Sources */,
+				A2EB1D132E1F6412008582D5 /* FavoriteButton.swift in Sources */,
 				A2D7F8AC2E1E66C0008F0A7C /* LandmarkList.swift in Sources */,
 				A2D7F8AE2E1E6799008F0A7C /* LandmarkDetail.swift in Sources */,
 				A2D7F89E2E1E61EF008F0A7C /* ContentView.swift in Sources */,
